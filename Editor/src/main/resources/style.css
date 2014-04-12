@@ -1,0 +1,13 @@
+.keyword {
+	-fx-fill: blue;
+	-fx-font-weight: bold;
+}
+
+.test {
+	-fx-fill: brown;
+	-fx-font-weight: bold;
+}
+
+.italic {
+	-fx-font-style: italic;
+}
