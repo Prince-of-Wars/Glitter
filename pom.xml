@@ -8,8 +8,83 @@
     <artifactId>glitter</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <inceptionYear>2014</inceptionYear>
+    <organization>
+        <name>Team Glitter</name>
+        <url>https://github.com/GlitterIDE</url>
+    </organization>
+    <url>https://github.com/GlitterIDE/Glitter</url>
+    <description>Parent Maven project pom for Glitter IDE</description>
+
+    <properties>
+        <project.root>.</project.root>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>qrokodial</id>
+            <name>Micahel Zanca</name>
+            <email>qrok@projectbnet.net</email>
+        </developer>
+    </developers>
+
     <modules>
         <module>Syntext</module>
-        <module>Engine</module>
+        <module>Editor</module>
     </modules>
+
+    <scm>
+        <connection>scm:git:git://github.com/GlitterIDE/Glitter.git</connection>
+        <developerConnection>scm:git:git@github.com/GlitterIDE/Glitter.git</developerConnection>
+        <url>https://github.com/GlitterIDE/Glitter</url>
+    </scm>
+
+    <build>
+        <defaultGoal>clean install</defaultGoal>
+
+        <plugins>
+            <plugin>
+                <groupId>com.mycila.maven-license-plugin</groupId>
+                <artifactId>maven-license-plugin</artifactId>
+                <version>1.10.b1</version>
+                <executions>
+                    <execution>
+                        <configuration>
+                            <properties>
+                                <url>${project.organization.url}</url>
+                                <inceptionYear>${project.inceptionYear}</inceptionYear>
+                                <organization>${project.organization.name}</organization>
+                            </properties>
+                            <quiet>true</quiet>
+                            <encoding>UTF-8</encoding>
+                            <strictCheck>true</strictCheck>
+                            <header>${project.root}/HEADER</header>
+                            <mapping>
+                                <java>SLASHSTAR_STYLE</java>
+                            </mapping>
+                            <keywords>
+                                <keyword>license</keyword>
+                            </keywords>
+                            <includes>
+                                <include>src/main/java/**</include>
+                                <include>src/test/java/**</include>
+                            </includes>
+                        </configuration>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>format</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
