@@ -54,8 +54,6 @@ public class SyntextArea extends CodeArea {
 
 						lastMatchEnd = content.getEnd();
 					}
-
-					spanBuilder.add(emptyList, newText.length() - lastMatchEnd);
 					setStyleSpans(0, spanBuilder.create());
 				}
 			}
