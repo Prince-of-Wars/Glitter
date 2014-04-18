@@ -1,0 +1,10 @@
+# Using Java and JDK8
+language: java
+jdk: oraclejdk8
+
+# Compile and package JAR with build properties set
+install: mvn package -DbuildNumber=$TRAVIS_BUILD_NUMBER -DciSystem=travis -Dcommit=${TRAVIS_COMMIT:0:7}
+
+notifications:
+  # Disable email notifications
+  email: false

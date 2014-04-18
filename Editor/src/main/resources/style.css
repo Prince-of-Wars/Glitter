@@ -11,3 +11,7 @@
 .italic {
 	-fx-font-style: italic;
 }
+
+.string {
+	-fx-fill: orange;
+}

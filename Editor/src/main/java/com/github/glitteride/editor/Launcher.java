@@ -33,6 +33,7 @@ public class Launcher extends Application {
 		SyntextArea codeArea = new SyntextArea();
 
 		SyntaxDefinition syntax = Syntext.create("Test");
+		syntax.createRule("string", "\"(?:\\.|(\\\\\\\")|[^\\\"\"\\n])*\"");
 		syntax.createRule("keyword", "\\bthe\\b");
 		syntax.createRule("test", "\\bbrown\\b");
 		syntax.createRule("italic", "\\bquick\\b");

@@ -3,6 +3,8 @@ Glitter
 
 A simple IDE written in Java that was created as a fun learning experience. Not intended to replace your current IDE.
 
+[![Build Status](https://travis-ci.org/GlitterIDE/Glitter.svg?branch=master)](https://travis-ci.org/GlitterIDE/Glitter)
+
 Notice
 ------
 
