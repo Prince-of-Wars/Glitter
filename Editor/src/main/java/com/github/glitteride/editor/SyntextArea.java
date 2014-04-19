@@ -54,7 +54,12 @@ public class SyntextArea extends CodeArea {
 
 						lastMatchEnd = content.getEnd();
 					}
-					setStyleSpans(0, spanBuilder.create());
+
+					try {
+						setStyleSpans(0, spanBuilder.create());
+					} catch(IllegalStateException e) {
+						// This is thrown when spanBuilder.create() has no spans to create -- we can safely ignore this.
+					}
 				}
 			}
 		});
